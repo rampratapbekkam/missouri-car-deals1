@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Find Used Cars in Missouri | Missouri Car Deals</title>
+  <meta name="description" content="Browse used cars in Missouri by price, city, and brand. Compare dealer listings easily.">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+  
+<body>
+  <div class="filters">
+  <select id="cityFilter">
+    <option value="all">All Cities</option>
+    <option value="St. Louis">St. Louis</option>
+    <option value="Kansas City">Kansas City</option>
+    <option value="Columbia">Columbia</option>
+  </select>
+
+  <select id="brandFilter">
+    <option value="all">All Brands</option>
+    <option value="Toyota">Toyota</option>
+    <option value="Honda">Honda</option>
+    <option value="Ford">Ford</option>
+  </select>
+
+  <select id="priceFilter">
+    <option value="all">Any Price</option>
+    <option value="below15000">Below $15,000</option>
+    <option value="15000to20000">$15,000 - $20,000</option>
+    <option value="above20000">Above $20,000</option>
+  </select>
+</div>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="find cars.html">Find Cars</a>
+    <a href="dealers.html">Dealers</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <h1>Find Used Cars in Missouri</h1>
+  <div class="car-list">
+
+  <div class="car-card"data-city="St. Louis" data-brand="Toyota" data-price="18500" data-dealer="ABC Motors">
+
+
+    <h3>2018 Toyota Camry</h3>
+    <p>Price: $18,500</p>
+    <p>City: St. Louis, MO</p>
+    <p>Dealer: ABC Motors</p>
+    <a href="tel:+13145743300" class="call-btn">Call Dealer</a>
+
+  </div>
+
+  <div class="car-card" data-city="Kansas City" data-brand="Honda" data-price="19900" data-dealer="Midwest Auto">
+
+    <h3>2019 Honda Accord</h3>
+    <p>Price: $19,900</p>
+    <p>City: Kansas City, MO</p>
+    <p>Dealer: Midwest Auto</p>
+    <a href="tel:+12079950746" class="call-btn">Call Dealer</a>
+
+  </div>
+
+  <div class="car-card" data-city="Columbia" data-brand="Ford" data-price="15200" data-dealer="Show Me Cars">
+    
+    <h3>2017 Ford Fusion</h3>
+    <p>Price: $15,200</p>
+    <p>City: Columbia, MO</p>
+    <p>Dealer: Show Me Cars</p>
+    <a href="tel:+13143339394" class="call-btn">Call Dealer</a>
+
+  </div>
+
+</div>
+
+
+  <p>
+    Browse used cars from multiple dealerships across Missouri.
+  </p>
+
+  
+<script src="script.js"></script>
+
+</body>
+</html>
