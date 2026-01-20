@@ -1,17 +1,35 @@
 body {
+  margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #efe6e6;
   text-align: center;
   padding: 50px;
+
+  background-image: url("images/background.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.55);
+  z-index: -1;
 }
 
+
+
 h1 {
-  color: #aca43e;
+  color: #756d05;
 }
 
 p {
   font-size: 18px;
-  color: #333333;
+  color: #050000;
 }
 nav {
   background-color: #1e3a8a;
@@ -114,3 +132,4 @@ nav a:hover {
   text-decoration: none;
   font-weight: bold;
 }
+
