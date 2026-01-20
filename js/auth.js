@@ -1,12 +1,24 @@
-window.onload = function () {
+const loginTab = document.getElementById("loginTab");
+const signupTab = document.getElementById("signupTab");
+const authBtn = document.getElementById("authBtn");
+
+window.onload = () => {
   document.getElementById("authModal").style.display = "flex";
 };
 
-// Temporary login/signup actions
-document.querySelector(".login-btn").addEventListener("click", () => {
-  alert("Login clicked (backend will be added later)");
-});
+loginTab.onclick = () => {
+  loginTab.classList.add("active");
+  signupTab.classList.remove("active");
+  authBtn.innerText = "Login";
+};
 
-document.querySelector(".signup-btn").addEventListener("click", () => {
-  alert("Signup clicked (backend will be added later)");
-});
+signupTab.onclick = () => {
+  signupTab.classList.add("active");
+  loginTab.classList.remove("active");
+  authBtn.innerText = "Sign Up";
+};
+
+authBtn.onclick = () => {
+  document.getElementById("authModal").style.display = "none";
+  document.getElementById("mainContent").style.display = "block";
+};
