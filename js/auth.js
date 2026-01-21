@@ -39,17 +39,51 @@ authBtn.onclick = async () => {
   }
 
   try {
-    if (isLogin) {
-      // LOGIN
-      await auth.signInWithEmailAndPassword(email, password);
-      alert("Login successful");
-    } else {
+   if (isLogin) {
+  // LOGIN
+  await auth.signInWithEmailAndPassword(email, password);
+  alert("Login successful");
+  
+}
+ else {
       // SIGN UP
       await auth.createUserWithEmailAndPassword(email, password);
       alert("Signup successful");
+       
     }
   } catch (error) {
     alert(error.message);
     console.error(error);
   }
 };
+// 🔐 Auth state listener (VERY IMPORTANT)
+// MUST be at the bottom of auth.js
+
+auth.onAuthStateChanged(user => {
+  const modal = document.getElementById("authModal");
+  const mainContent = document.getElementById("mainContent");
+
+  if (user) {
+    // ✅ User logged in
+    console.log("User logged in:", user.email);
+
+    // Hide login modal
+    if (modal) modal.style.display = "none";
+
+    // ✅ SHOW MAIN CONTENT (THIS WAS MISSING)
+    if (mainContent) mainContent.style.display = "block";
+
+  } else {
+    // ❌ User logged out
+    console.log("User logged out");
+
+    // Show login modal
+    if (modal) modal.style.display = "flex";
+
+    // Hide site content
+    if (mainContent) mainContent.style.display = "none";
+  }
+});
+
+
+
